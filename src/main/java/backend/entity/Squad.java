@@ -14,7 +14,7 @@ public class Squad {
     private long id;
     private String name;
     private String currency;
-    @ManyToMany(mappedBy = "squads")
+    @ManyToMany(mappedBy = "squads", cascade = {CascadeType.MERGE})
     private Set<User> users = new HashSet<>();
 
     public void setUsers(Set<User> users) {

@@ -18,12 +18,45 @@ public class GroupController {
         this.groupRepository = groupRepository;
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public void addGroup(@RequestBody AddGroupRequest addGroupRequest){
+    @PostMapping(path="")
+    public @ResponseBody boolean addGroup(@RequestBody AddGroupRequest addGroupRequest){
+
+        if(addGroupRequest.getName().isEmpty()){
+            return false; //"Groupname Parameter is missing";
+        }
+
         Squad group = new Squad();
         group.setName(addGroupRequest.getName());
         group.setCurrency(addGroupRequest.getCurrency());
         groupRepository.save(group);
+        return true;
+    }
+
+    @DeleteMapping(path="/{id}")
+    public @ResponseBody String deleteMessageById(@PathVariable(value="id") long id) {
+        Squad user = new Squad();
+        user = groupRepository.findOne(id);
+
+        if(user != null){
+            groupRepository.delete(user);
+            return user.getName() + " is deleted";
+        }
+
+        return "Group cannot deleted!";
+    }
+
+    @PutMapping(path="/{id}")
+    public @ResponseBody Squad updateUser (@PathVariable(value="id") long id, @RequestBody Squad updatedGroup, Long user){
+        Squad savedGroup = groupRepository.findOne(id);
+
+        if (savedGroup != null){
+            savedGroup.setName(updatedGroup.getName());
+            savedGroup.setCurrency(updatedGroup.getCurrency());
+            groupRepository.save(savedGroup);
+            return savedGroup;
+        } else {
+            return null;
+        }
     }
 
     @GetMapping(path="")
