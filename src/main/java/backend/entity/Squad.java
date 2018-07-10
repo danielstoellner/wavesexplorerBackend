@@ -45,6 +45,10 @@ public class Squad {
         this.name = name;
     }
 
+    public Set<User> getUsers() {
+        return users;
+    }
+
     public String getCurrency() {
         return currency;
     }
