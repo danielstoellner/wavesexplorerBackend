@@ -57,7 +57,4 @@ public class Squad {
         this.currency = currency;
     }
 
-    public Set<User> getUsers() {
-        return users;
-    }
 }
