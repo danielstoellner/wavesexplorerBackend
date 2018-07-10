@@ -12,6 +12,8 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 
 class SquadTest {
     Squad n;

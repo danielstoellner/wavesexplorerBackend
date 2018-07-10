@@ -16,7 +16,7 @@ public class User {
     private String username;
     private String address;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = {CascadeType.DETACH})
     @JoinTable(
             name = "User_Squad",
             joinColumns = {@JoinColumn(name ="user_id")},

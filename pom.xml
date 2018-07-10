@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.rosenbauer</groupId>
-	<artifactId>spring-boot-rest-exmaple</artifactId>
+	<artifactId>backendWavesExplorer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-rest-exmaple</name>
+	<name>backendWavesExplorer</name>
 	<description>Demo project for Spring Boot Rest Example</description>
 
 	<parent>
