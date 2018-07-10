@@ -25,6 +25,7 @@ public class DataBlockRepositoryTest {
     @Autowired
     private TestEntityManager entityManager;
 
+    @Autowired
     private DataBlockRepository dataBlockRepository;
 
 

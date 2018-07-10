@@ -1,3 +1,5 @@
+package tests;
+
 import backend.controller.StatisticsController;
 import backend.entity.DataBlock;
 import org.junit.Before;

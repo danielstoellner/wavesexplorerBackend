@@ -1,3 +1,4 @@
+package tests;
 import backend.entity.Squad;
 import backend.entity.User;
 import org.junit.jupiter.api.AfterEach;
@@ -8,6 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class UserTest {
